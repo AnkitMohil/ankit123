@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="Test2Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="Test.Shopping2.MegaShop">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="testDemoWebShopLogin"/>
+        </methods>
+      </class> <!-- Test.Shopping2.MegaShop -->
+    </classes>
+  </test> <!-- Test2Chrome(failed) -->
+  <test thread-count="5" name="Test1Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="Test.Shopping2.MegaShop">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="testDemoWebShopLogin" invocation-numbers="0 1 2 3 4"/>
+        </methods>
+      </class> <!-- Test.Shopping2.MegaShop -->
+    </classes>
+  </test> <!-- Test1Chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
